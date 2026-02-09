@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Botanics: Alien Defense</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== START MENU SCREEN ===== -->
+  <div id="start-menu" class="screen active">
+    <div class="menu-container">
+      <h1 class="game-title">
+        <span class="title-icon">&#127793;</span>
+        Space Botanics
+        <span class="title-icon">&#128125;</span>
+      </h1>
+      <p class="subtitle">Alien Defense</p>
+
+      <div class="menu-section">
+        <label for="difficulty-select">Difficulty</label>
+        <select id="difficulty-select">
+          <option value="easy">Easy &mdash; Relaxed pace, weaker aliens</option>
+          <option value="normal" selected>Normal &mdash; Balanced challenge</option>
+          <option value="hard">Hard &mdash; Faster waves, tougher aliens</option>
+        </select>
+      </div>
+
+      <button id="btn-start" class="btn btn-primary">Start Game</button>
+
+      <div class="menu-section controls-info">
+        <h3>How to Play</h3>
+        <ul>
+          <li>Click a defender in the toolbar, then click a grid cell to place it</li>
+          <li>Collect Stardust from Star Blooms and passive generation</li>
+          <li>Defeat all alien waves to win!</li>
+          <li>Right-click a placed defender to sell it (50% refund)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GAME SCREEN ===== -->
+  <div id="game-screen" class="screen">
+    <!-- Top HUD bar -->
+    <div id="hud">
+      <div class="hud-left">
+        <span id="stardust-display" title="Stardust (resources)">&#11088; <span id="stardust-count">100</span></span>
+        <span id="wave-display">Wave: <span id="wave-count">1</span></span>
+        <span id="lives-display">&#10084;&#65039; <span id="lives-count">10</span></span>
+        <span id="score-display">Score: <span id="score-count">0</span></span>
+      </div>
+      <div class="hud-right">
+        <button id="btn-sound" class="btn btn-small" title="Toggle sound">&#128266; On</button>
+        <button id="btn-pause" class="btn btn-small">&#9208; Pause</button>
+        <button id="btn-restart" class="btn btn-small">&#8635; Restart</button>
+        <button id="btn-menu" class="btn btn-small">Menu</button>
+      </div>
+    </div>
+
+    <!-- Defender selection toolbar -->
+    <div id="defender-toolbar">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- Main game board with perspective wrapper -->
+    <div id="board-wrapper">
+      <div id="game-board">
+        <!-- Grid cells, defenders, enemies, projectiles rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Wave announcement overlay -->
+    <div id="wave-announce" class="overlay hidden">
+      <span id="wave-announce-text">Wave 1</span>
+    </div>
+  </div>
+
+  <!-- ===== PAUSE OVERLAY ===== -->
+  <div id="pause-overlay" class="overlay hidden">
+    <div class="overlay-box">
+      <h2>Paused</h2>
+      <button id="btn-resume" class="btn btn-primary">Resume</button>
+    </div>
+  </div>
+
+  <!-- ===== GAME OVER OVERLAY ===== -->
+  <div id="gameover-overlay" class="overlay hidden">
+    <div class="overlay-box">
+      <h2 id="gameover-title">Game Over</h2>
+      <p id="gameover-message"></p>
+      <p>Score: <span id="gameover-score">0</span></p>
+      <button id="btn-gameover-restart" class="btn btn-primary">Play Again</button>
+      <button id="btn-gameover-menu" class="btn">Main Menu</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

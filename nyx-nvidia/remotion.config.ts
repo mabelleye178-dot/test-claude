@@ -11,3 +11,6 @@ Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 Config.setDefaultPremountInSeconds(2);
+Config.setBrowserExecutable("/opt/pw-browsers/chromium");
+Config.setChromiumOpenGlRenderer("angle");
+Config.setConcurrency(2);

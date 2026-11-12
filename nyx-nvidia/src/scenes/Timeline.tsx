@@ -4,17 +4,22 @@ import { C, F } from "../theme";
 import { Atmosphere, Eyebrow, Rise, Tag, TAG_META } from "../components/ui";
 import { TIMELINE } from "../data";
 
-// 9 events, 3 pages of 3. Scene length 560 frames: header 0-40, pages at 40/210/380 (170 each).
-const PAGE_LEN = 170;
-const PAGE0 = 40;
+// 9 events, 3 pages of 3. Scene length 560 frames.
 const PER = 3;
+// page windows in scene frames: [start, end)
+const PAGES: [number, number][] = [
+  [40, 180],
+  [180, 390],
+  [390, 560],
+];
 
 export const Timeline: React.FC = () => {
   const frame = useCurrentFrame();
-  const pageIdx = Math.min(2, Math.max(0, Math.floor((frame - PAGE0) / PAGE_LEN)));
-  const pageStart = PAGE0 + pageIdx * PAGE_LEN;
+  let pageIdx = 0;
+  for (let i = 0; i < PAGES.length; i++) if (frame >= PAGES[i][0]) pageIdx = i;
+  const [pageStart, pageEnd] = PAGES[pageIdx];
   const items = TIMELINE.slice(pageIdx * PER, pageIdx * PER + PER);
-  const pageOut = interpolate(frame, [pageStart + PAGE_LEN - 14, pageStart + PAGE_LEN], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const pageOut = interpolate(frame, [pageEnd - 14, pageEnd], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const lineH = interpolate(frame, [pageStart, pageStart + 90], [0, 800], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
 
   return (

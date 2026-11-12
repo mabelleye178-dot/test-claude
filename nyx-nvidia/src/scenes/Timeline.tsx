@@ -1,20 +1,22 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame, interpolate, Easing } from "remotion";
+import { AbsoluteFill, useCurrentFrame, useVideoConfig, interpolate, Easing } from "remotion";
 import { C, F } from "../theme";
 import { Atmosphere, Eyebrow, Rise, Tag, TAG_META } from "../components/ui";
 import { TIMELINE } from "../data";
 
 // 9 events, 3 pages of 3. Scene length 560 frames.
 const PER = 3;
-// page windows in scene frames: [start, end)
-const PAGES: [number, number][] = [
-  [40, 180],
-  [180, 390],
-  [390, 560],
+// page windows as fractions of the scene length (scene length follows the narration, see timing.json)
+const PAGE_FRACTIONS: [number, number][] = [
+  [40 / 560, 180 / 560],
+  [180 / 560, 390 / 560],
+  [390 / 560, 1],
 ];
 
 export const Timeline: React.FC = () => {
   const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  const PAGES = PAGE_FRACTIONS.map(([a, b]) => [Math.round(a * durationInFrames), Math.round(b * durationInFrames)] as [number, number]);
   let pageIdx = 0;
   for (let i = 0; i < PAGES.length; i++) if (frame >= PAGES[i][0]) pageIdx = i;
   const [pageStart, pageEnd] = PAGES[pageIdx];

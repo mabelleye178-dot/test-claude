@@ -1,132 +1,184 @@
 [
   {
     "start": 0.4,
-    "end": 2.8,
-    "text": "3.58%。"
+    "end": 1.886,
+    "text": "3.58%。",
+    "scene": "hook",
+    "offsetFromScene": 0.4
   },
   {
     "start": 2.8,
-    "end": 5.4,
-    "text": "黄仁勋在英伟达的全部持股。"
+    "end": 5.238,
+    "text": "黄仁勋在英伟达的全部持股。",
+    "scene": "hook",
+    "offsetFromScene": 2.8
   },
   {
-    "start": 6.0,
-    "end": 9.0,
-    "text": "他创立了它，却从未真正拥有它。"
+    "start": 6.033,
+    "end": 8.668,
+    "text": "他创立了它，却从未真正拥有它。",
+    "scene": "title",
+    "offsetFromScene": 0.333
   },
   {
-    "start": 9.2,
-    "end": 11.8,
-    "text": "谁，才是真正的控制者？"
+    "start": 9.233,
+    "end": 11.114,
+    "text": "谁，才是真正的控制者？",
+    "scene": "title",
+    "offsetFromScene": 3.533
   },
   {
-    "start": 12.7,
-    "end": 15.3,
-    "text": "2026年股东委托书显示，"
+    "start": 12.733,
+    "end": 15.07,
+    "text": "2026年股东委托书显示，",
+    "scene": "ownership",
+    "offsetFromScene": 0.367
   },
   {
-    "start": 15.3,
-    "end": 19.0,
-    "text": "黄仁勋持有约8.7亿股，占3.58%。"
+    "start": 15.333,
+    "end": 19.013,
+    "text": "黄仁勋持有约8.7亿股，占3.58%。",
+    "scene": "ownership",
+    "offsetFromScene": 2.967
   },
   {
-    "start": 19.0,
-    "end": 22.0,
-    "text": "先锋领航7.31%，贝莱德7.43%。"
+    "start": 19.263,
+    "end": 23.733,
+    "text": "先锋领航7.31%，贝莱德7.43%。",
+    "scene": "ownership",
+    "offsetFromScene": 6.897
   },
   {
-    "start": 22.0,
-    "end": 24.0,
-    "text": "董事与高管合计不到4%。"
+    "start": 23.983,
+    "end": 26.74,
+    "text": "董事与高管合计不到4%。",
+    "scene": "ownership",
+    "offsetFromScene": 11.617
   },
   {
-    "start": 24.4,
-    "end": 26.4,
-    "text": "关键，在董事会。"
+    "start": 27.6,
+    "end": 29.058,
+    "text": "关键，在董事会。",
+    "scene": "board",
+    "offsetFromScene": 0.4
   },
   {
-    "start": 26.4,
-    "end": 30.2,
-    "text": "2026年6月，股东选出10位董事，9位独立。"
+    "start": 29.6,
+    "end": 33.222,
+    "text": "2026年6月，股东选出10位董事，9位独立。",
+    "scene": "board",
+    "offsetFromScene": 2.4
   },
   {
-    "start": 30.2,
-    "end": 32.2,
-    "text": "7月增至11席。"
+    "start": 33.472,
+    "end": 35.247,
+    "text": "7月增至11席。",
+    "scene": "board",
+    "offsetFromScene": 6.272
   },
   {
-    "start": 32.2,
-    "end": 34.0,
-    "text": "黄仁勋，只是一票。"
+    "start": 35.497,
+    "end": 37.088,
+    "text": "黄仁勋，只是一票。",
+    "scene": "board",
+    "offsetFromScene": 8.297
   },
   {
-    "start": 34.5,
-    "end": 37.8,
-    "text": "英伟达只有一类普通股，没有双层股权。"
+    "start": 38.067,
+    "end": 41.109,
+    "text": "英伟达只有一类普通股，没有双层股权。",
+    "scene": "power",
+    "offsetFromScene": 0.5
   },
   {
-    "start": 37.8,
-    "end": 40.8,
-    "text": "股东每年选董事，董事会任免CEO。"
+    "start": 41.367,
+    "end": 43.979,
+    "text": "股东每年选董事，董事会任免CEO。",
+    "scene": "power",
+    "offsetFromScene": 3.8
   },
   {
-    "start": 40.8,
-    "end": 43.2,
-    "text": "股东还废除了绝对多数条款。"
+    "start": 44.367,
+    "end": 46.77,
+    "text": "股东还废除了绝对多数条款。",
+    "scene": "power",
+    "offsetFromScene": 6.8
   },
   {
-    "start": 43.2,
-    "end": 44.8,
-    "text": "制度，大于个人。"
+    "start": 47.02,
+    "end": 48.367,
+    "text": "制度，大于个人。",
+    "scene": "power",
+    "offsetFromScene": 9.453
   },
   {
-    "start": 45.0,
-    "end": 48.0,
-    "text": "2025年，H20出口先受限，后放行。"
+    "start": 49.5,
+    "end": 52.739,
+    "text": "2025年，H20出口先受限，后放行。",
+    "scene": "timeline",
+    "offsetFromScene": 0.667
   },
   {
-    "start": 48.0,
-    "end": 50.0,
-    "text": "12月，H200也获准出口。"
+    "start": 52.989,
+    "end": 55.613,
+    "text": "12月，H200也获准出口。",
+    "scene": "timeline",
+    "offsetFromScene": 4.156
   },
   {
-    "start": 50.4,
-    "end": 53.6,
-    "text": "10月起，媒体聚焦他与客户高管的私人关系。"
+    "start": 55.863,
+    "end": 59.567,
+    "text": "10月起，媒体聚焦他与客户高管的私人关系。",
+    "scene": "timeline",
+    "offsetFromScene": 7.03
   },
   {
-    "start": 53.6,
-    "end": 55.6,
-    "text": "情报资产指控，尚无公开证据。"
+    "start": 59.817,
+    "end": 62.476,
+    "text": "情报资产指控，尚无公开证据。",
+    "scene": "timeline",
+    "offsetFromScene": 10.984
   },
   {
-    "start": 55.6,
-    "end": 59.2,
-    "text": "11月8日，他致信道歉，董事会启动独立调查。"
+    "start": 62.726,
+    "end": 66.65,
+    "text": "11月8日，他致信道歉，董事会启动独立调查。",
+    "scene": "timeline",
+    "offsetFromScene": 13.893
   },
   {
-    "start": 59.2,
-    "end": 62.6,
-    "text": "11月12日，黄仁勋辞任，克雷斯代理CEO。"
+    "start": 66.9,
+    "end": 70.696,
+    "text": "11月12日，黄仁勋辞任，克雷斯代理CEO。",
+    "scene": "timeline",
+    "offsetFromScene": 18.067
   },
   {
-    "start": 63.8,
-    "end": 66.0,
-    "text": "3.58%，从来不是控制权。"
+    "start": 72.633,
+    "end": 75.408,
+    "text": "3.58%，从来不是控制权。",
+    "scene": "verdict",
+    "offsetFromScene": 1.467
   },
   {
-    "start": 66.0,
-    "end": 69.4,
-    "text": "控制英伟达的，是股东选票和独立董事会。"
+    "start": 75.658,
+    "end": 79.002,
+    "text": "控制英伟达的，是股东选票和独立董事会。",
+    "scene": "verdict",
+    "offsetFromScene": 4.492
   },
   {
-    "start": 69.8,
-    "end": 72.0,
-    "text": "指控未定论，调查进行中。"
+    "start": 79.933,
+    "end": 82.353,
+    "text": "指控未定论，调查进行中。",
+    "scene": "outro",
+    "offsetFromScene": 0.467
   },
   {
-    "start": 72.4,
-    "end": 74.6,
-    "text": "看见数字背后的结构。"
+    "start": 82.603,
+    "end": 84.298,
+    "text": "看见数字背后的结构。",
+    "scene": "outro",
+    "offsetFromScene": 3.137
   }
 ]

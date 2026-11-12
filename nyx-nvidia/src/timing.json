@@ -1,0 +1,39 @@
+{
+  "fps": 30,
+  "transition": 20,
+  "totalFrames": 2563,
+  "scenes": [
+    {
+      "id": "hook",
+      "d": 191
+    },
+    {
+      "id": "title",
+      "d": 220
+    },
+    {
+      "id": "ownership",
+      "d": 465
+    },
+    {
+      "id": "board",
+      "d": 331
+    },
+    {
+      "id": "power",
+      "d": 358
+    },
+    {
+      "id": "timeline",
+      "d": 690
+    },
+    {
+      "id": "verdict",
+      "d": 269
+    },
+    {
+      "id": "outro",
+      "d": 179
+    }
+  ]
+}

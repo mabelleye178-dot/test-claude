@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Audio, staticFile } from "remotion";
+import timing from "./timing.json";
 import { TransitionSeries, linearTiming } from "@remotion/transitions";
 import { fade } from "@remotion/transitions/fade";
 import { slide } from "@remotion/transitions/slide";
@@ -16,18 +17,10 @@ import { Subtitles } from "./components/Subtitles";
 import { useFonts } from "./fonts";
 import { C } from "./theme";
 
-export const T = 20; // transition frames
-// Scene durations (frames). Sum - 7*T = 2250.
-export const SCENES = [
-  { id: "hook", d: 190, C: Hook },
-  { id: "title", d: 220, C: Title },
-  { id: "ownership", d: 370, C: Ownership },
-  { id: "board", d: 320, C: Board },
-  { id: "power", d: 330, C: Power },
-  { id: "timeline", d: 560, C: Timeline },
-  { id: "verdict", d: 230, C: Verdict },
-  { id: "outro", d: 170, C: Outro },
-];
+export const T = timing.transition; // transition frames
+const COMPONENTS: Record<string, React.FC> = { hook: Hook, title: Title, ownership: Ownership, board: Board, power: Power, timeline: Timeline, verdict: Verdict, outro: Outro };
+// Scene durations come from src/timing.json, written by scripts/audio/build_mix.py from the real narration length.
+export const SCENES = timing.scenes.map((s) => ({ id: s.id, d: s.d, C: COMPONENTS[s.id] }));
 export const TOTAL = SCENES.reduce((a, s) => a + s.d, 0) - (SCENES.length - 1) * T;
 
 export const Video: React.FC = () => {
@@ -51,6 +44,7 @@ export const Video: React.FC = () => {
       </TransitionSeries>
       <BrandBar />
       <Subtitles />
+      <Audio src={staticFile("audio/mix.wav")} />
     </AbsoluteFill>
   );
 };

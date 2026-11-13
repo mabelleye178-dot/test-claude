@@ -3,7 +3,8 @@ import json, os, subprocess, sys, re
 import numpy as np
 sys.path.insert(0, os.path.dirname(__file__))
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-MP4 = os.path.join(ROOT, "out/nyx-nvidia-directors-cut-v3.mp4")
+MP4 = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "out/nyx-nvidia-directors-cut-v3.mp4")
+REPORT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, "out/v3/qc_report.json")
 tl = json.load(open(os.path.join(ROOT, "src/v3/timeline.json"), encoding="utf-8"))
 rep = {}
 def run(args): return subprocess.run(args, capture_output=True, text=True)
@@ -37,5 +38,5 @@ for c in tl["cues"]:
     if err > 0.1: bad.append(c["id"])
     print(f"{'OK ' if err <= 0.1 else 'BAD'} {c['start']:7.2f}s {c['id']:12s} {hyp}", flush=True)
 rep["subtitle_vs_audio"] = {"cues": len(rows), "mismatches": bad, "rows": rows}
-json.dump(rep, open(os.path.join(ROOT, "out/v3/qc_report.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(rep, open(REPORT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(json.dumps({k: rep[k] for k in rep if k != "subtitle_vs_audio"}, ensure_ascii=False, indent=1)); print("mismatches:", bad)

@@ -1,0 +1,286 @@
+{
+ "video": {
+  "codec_name": "h264",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "30/1",
+  "nb_frames": "3958",
+  "duration": "131.933333",
+  "pix_fmt": "yuvj420p",
+  "profile": "High"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "sample_rate": "48000",
+  "channels": 2,
+  "channel_layout": "stereo",
+  "bit_rate": "271231",
+  "duration": "131.933000"
+ },
+ "format": {
+  "duration": "131.933333",
+  "size_mb": 30.94,
+  "expected_duration": 131.933
+ },
+ "loudness": {
+  "integrated_lufs": -16.1,
+  "lra_lu": 2.2,
+  "true_peak_dbtp": -1.8
+ },
+ "silences_over_1s_below_-50dB": [],
+ "black_segments_over_0.5s": [],
+ "channels_rms_db": [
+  -19.73,
+  -19.72
+ ],
+ "lr_correlation": 0.968,
+ "segment_rms_db": {
+  "start": -19.5,
+  "middle": -19.4,
+  "end": -22.4
+ },
+ "subtitle_vs_audio": {
+  "cues": 34,
+  "mismatches": [],
+  "rows": [
+   {
+    "id": "hook.num",
+    "start": 0.35,
+    "subtitle": "3.58%。",
+    "heard_in_final_mix": "百分之三点五吧。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "hook.who",
+    "start": 2.098,
+    "subtitle": "这是黄仁勋在英伟达的持股比例。",
+    "heard_in_final_mix": "这是黄仁勋在英伟达的持股比例。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "hook.event",
+    "start": 4.769,
+    "subtitle": "2026年11月，他辞去了CEO和董事职务。",
+    "heard_in_final_mix": "2026年11月,他辞去了CEO和董事职务。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "hook.q",
+    "start": 8.873,
+    "subtitle": "少数股权的创始人，控制力从哪里来？",
+    "heard_in_final_mix": "少数股权的创始人,控制力从哪里来?",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "own.intro",
+    "start": 13.15,
+    "subtitle": "先看所有权。",
+    "heard_in_final_mix": "先看所有圈。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "own.huang",
+    "start": 14.498,
+    "subtitle": "股东委托书显示，黄仁勋持有约8.7亿股，占3.58%。",
+    "heard_in_final_mix": "股东委托书显示,黄仁勋持有约8.7亿股,占3.58%。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "own.funds",
+    "start": 20.031,
+    "subtitle": "先锋领航和贝莱德，各持约7%，都比他多。",
+    "heard_in_final_mix": "先锋领航和贝莱德各持约7% 都比他多。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "own.insiders",
+    "start": 24.573,
+    "subtitle": "全体董事和高管合计，不到4%。",
+    "heard_in_final_mix": "全体董事和高管合计,不到百分之四。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "own.vote1",
+    "start": 28.766,
+    "subtitle": "再看表决权。英伟达一股一票。",
+    "heard_in_final_mix": "再看表决权,英伟达一股一票。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "own.vote2",
+    "start": 31.946,
+    "subtitle": "他的表决权，同样只有3.58%。",
+    "heard_in_final_mix": "他的表决权同样只有3.58%。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "board.intro",
+    "start": 35.983,
+    "subtitle": "真正的治理权，在董事会。",
+    "heard_in_final_mix": "真正的治理权在董事会。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "board.elect",
+    "start": 38.543,
+    "subtitle": "2026年6月，股东选出10位董事，9位独立。",
+    "heard_in_final_mix": "2026年6月,股东选出十位董事,九位独立。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "board.expand",
+    "start": 43.119,
+    "subtitle": "7月，董事会增至11席。",
+    "heard_in_final_mix": "七月,董事会增至十一席。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "board.one",
+    "start": 46.085,
+    "subtitle": "在这张桌子上，黄仁勋只有一票。",
+    "heard_in_final_mix": "在这张桌子上,黄仁勋只有一票。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "pow.intro",
+    "start": 49.983,
+    "subtitle": "把权力拆开，一共四层。",
+    "heard_in_final_mix": "把权力拆开,一共四层。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "pow.sh",
+    "start": 52.33,
+    "subtitle": "股东拥有所有权，用表决权选出董事会。",
+    "heard_in_final_mix": "股东拥有所有权,用表决权选出董事会。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "pow.board",
+    "start": 56.208,
+    "subtitle": "董事会任命、监督，也能更换CEO。",
+    "heard_in_final_mix": "董事会任命、监督、也能更换CEO。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "pow.ceo",
+    "start": 59.803,
+    "subtitle": "CEO带领管理层，负责经营。",
+    "heard_in_final_mix": "CEO带领管理层,负责经营。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "pow.back",
+    "start": 62.757,
+    "subtitle": "反过来，管理层对董事会负责，董事会对股东负责。",
+    "heard_in_final_mix": "反过来,管理层对董事会负责,董事会对股东负责。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "pow.founder",
+    "start": 67.609,
+    "subtitle": "创始人的影响力，更多来自业绩和信任。",
+    "heard_in_final_mix": "创始人的影响力更多来自业绩和信任。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "tl.bg",
+    "start": 72.017,
+    "subtitle": "2025年，H20芯片出口，先受限、后放行。",
+    "heard_in_final_mix": "2025年,H20芯片出口。先受线,后放行。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "tl.oct",
+    "start": 77.6,
+    "subtitle": "2026年10月底，媒体报道，美方正调查英伟达的一家客户。",
+    "heard_in_final_mix": "2026年10月底,媒体报道,美方正调查英伟达的一家客户。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "tl.nov",
+    "start": 82.661,
+    "subtitle": "11月初，报道指向黄仁勋与该公司高管的私人关系。",
+    "heard_in_final_mix": "11月初,报道指向黄仁勋与该公司高管的私人关系。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "tl.alleg",
+    "start": 87.186,
+    "subtitle": "所谓情报背景，至今没有公开证据。",
+    "heard_in_final_mix": "所谓情报背景,至今没有公开证据。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "tl.nov8",
+    "start": 90.351,
+    "subtitle": "11月8日，黄仁勋致信道歉，董事会启动独立调查。",
+    "heard_in_final_mix": "11月8日,黄仁勋致信道歉,董事会启动独立调查。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "turn.resign",
+    "start": 96.533,
+    "subtitle": "11月11日，董事会接受黄仁勋辞任。",
+    "heard_in_final_mix": "11月11日,董事会接受黄仁勋此任。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "turn.kress",
+    "start": 100.343,
+    "subtitle": "次日公告：首席财务官克雷斯，出任临时CEO。",
+    "heard_in_final_mix": "此日公告,首席财务官克雷斯,出任临时CEO。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "turn.chair",
+    "start": 105.013,
+    "subtitle": "哈维·琼斯，成为首位董事长。",
+    "heard_in_final_mix": "哈维琼斯,成为首位董事长。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "ins.neq",
+    "start": 108.9,
+    "subtitle": "所有权，不等于控制权。",
+    "heard_in_final_mix": "所有权不等于控制权。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "ins.start",
+    "start": 111.418,
+    "subtitle": "股权比例，只是理解控制力的起点。",
+    "heard_in_final_mix": "股权比例只是理解控制力的起点。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "ins.rest",
+    "start": 114.231,
+    "subtitle": "还要看表决权、董事会，和管理层。",
+    "heard_in_final_mix": "还要看表决权、董事会和管理层。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "end.quote",
+    "start": 118.467,
+    "subtitle": "持有多少股份，和掌握多少权力，从来不是同一个问题。",
+    "heard_in_final_mix": "持有多少股份和掌握多少权利,从来不是同一个问题。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "end.note",
+    "start": 123.48,
+    "subtitle": "调查仍在进行，相关指控尚无定论。",
+    "heard_in_final_mix": "调查仍在进行,相关指控尚无定论。",
+    "pinyin_err": 0.0
+   },
+   {
+    "id": "end.brand",
+    "start": 127.217,
+    "subtitle": "看见数字背后的结构。",
+    "heard_in_final_mix": "看见数字背后的结构。",
+    "pinyin_err": 0.0
+   }
+  ]
+ }
+}

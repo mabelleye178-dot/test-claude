@@ -34,3 +34,7 @@
 - 成片与配套文件在 `deliverables/v3/`；质检结果 `deliverables/v3/qc-report.json`。
 - `public/audio/v3-mix.wav` 不入库：运行 `python3 scripts/v3/score_v3.py && python3 scripts/v3/mix.py` 即可重建（逐句旁白在 `assets/v3/tts/`）。
 - Python 依赖：numpy scipy soundfile librosa（混音/配乐）；torch transformers==4.57.3 accelerate==1.12.0 qwen-tts(--no-deps) einops onnxruntime（重新合成旁白）；faster-whisper pypinyin（质检，需 `HF_HUB_DISABLE_XET=1`）。
+
+### V3 原创替代配乐版（2026-11-13）
+- 用户想换成商业歌曲《We Never》，项目内无授权，未使用；改为原创替代配乐。交付在 `deliverables/v3-alt-score/`，说明见其中 `music-swap-report.md`。
+- 只换音轨：`scripts/v3/score_v3b.py` + `MIX_TAG=_alt ... scripts/v3/mix.py` + ffmpeg `-c:v copy`。V3 原版未改动。

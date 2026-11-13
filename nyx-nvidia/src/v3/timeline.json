@@ -1,48 +1,48 @@
 {
  "fps": 30,
  "transition": 18,
- "totalFrames": 4781,
- "estimatedCues": 34,
+ "totalFrames": 3958,
+ "estimatedCues": 0,
  "scenes": [
   {
    "id": "hook",
    "start": 0,
-   "d": 517
+   "d": 396
   },
   {
    "id": "ownership",
-   "start": 499,
-   "d": 793
+   "start": 378,
+   "d": 703
   },
   {
    "id": "board",
-   "start": 1274,
-   "d": 525
+   "start": 1063,
+   "d": 438
   },
   {
    "id": "power",
-   "start": 1781,
-   "d": 818
+   "start": 1483,
+   "d": 679
   },
   {
    "id": "timeline",
-   "start": 2581,
-   "d": 883
+   "start": 2144,
+   "d": 743
   },
   {
    "id": "turning",
-   "start": 3446,
-   "d": 475
+   "start": 2869,
+   "d": 398
   },
   {
    "id": "insight",
-   "start": 3903,
-   "d": 387
+   "start": 3249,
+   "d": 305
   },
   {
    "id": "conclusion",
-   "start": 4272,
-   "d": 509
+   "start": 3536,
+   "d": 422
   }
  ],
  "cues": [
@@ -51,238 +51,238 @@
    "scene": "hook",
    "text": "3.58%。",
    "start": 0.35,
-   "end": 1.94
+   "end": 1.548
   },
   {
    "id": "hook.who",
    "scene": "hook",
    "text": "这是黄仁勋在英伟达的持股比例。",
-   "start": 2.49,
-   "end": 6.015
+   "start": 2.098,
+   "end": 4.369
   },
   {
    "id": "hook.event",
    "scene": "hook",
    "text": "2026年11月，他辞去了CEO和董事职务。",
-   "start": 6.415,
-   "end": 11.445
+   "start": 4.769,
+   "end": 8.373
   },
   {
    "id": "hook.q",
    "scene": "hook",
    "text": "少数股权的创始人，控制力从哪里来？",
-   "start": 11.945,
-   "end": 15.9
+   "start": 8.873,
+   "end": 11.888
   },
   {
    "id": "own.intro",
    "scene": "ownership",
    "text": "先看所有权。",
-   "start": 17.183,
-   "end": 18.773
+   "start": 13.15,
+   "end": 14.148
   },
   {
    "id": "own.huang",
    "scene": "ownership",
    "text": "股东委托书显示，黄仁勋持有约8.7亿股，占3.58%。",
-   "start": 19.123,
-   "end": 25.228
+   "start": 14.498,
+   "end": 19.731
   },
   {
    "id": "own.funds",
    "scene": "ownership",
    "text": "先锋领航和贝莱德，各持约7%，都比他多。",
-   "start": 25.528,
-   "end": 30.128
+   "start": 20.031,
+   "end": 24.273
   },
   {
    "id": "own.insiders",
    "scene": "ownership",
    "text": "全体董事和高管合计，不到4%。",
-   "start": 30.428,
-   "end": 33.953
+   "start": 24.573,
+   "end": 28.216
   },
   {
    "id": "own.vote1",
    "scene": "ownership",
    "text": "再看表决权。英伟达一股一票。",
-   "start": 34.503,
-   "end": 37.813
+   "start": 28.766,
+   "end": 31.646
   },
   {
    "id": "own.vote2",
    "scene": "ownership",
    "text": "他的表决权，同样只有3.58%。",
-   "start": 38.113,
-   "end": 41.853
+   "start": 31.946,
+   "end": 34.805
   },
   {
    "id": "board.intro",
    "scene": "board",
    "text": "真正的治理权，在董事会。",
-   "start": 43.017,
-   "end": 45.897
+   "start": 35.983,
+   "end": 38.143
   },
   {
    "id": "board.elect",
    "scene": "board",
    "text": "2026年6月，股东选出10位董事，9位独立。",
-   "start": 46.297,
-   "end": 51.542
+   "start": 38.543,
+   "end": 42.819
   },
   {
    "id": "board.expand",
    "scene": "board",
    "text": "7月，董事会增至11席。",
-   "start": 51.842,
-   "end": 54.722
+   "start": 43.119,
+   "end": 45.685
   },
   {
    "id": "board.one",
    "scene": "board",
    "text": "在这张桌子上，黄仁勋只有一票。",
-   "start": 55.122,
-   "end": 58.647
+   "start": 46.085,
+   "end": 48.723
   },
   {
    "id": "pow.intro",
    "scene": "power",
    "text": "把权力拆开，一共四层。",
-   "start": 59.917,
-   "end": 62.582
+   "start": 49.983,
+   "end": 51.93
   },
   {
    "id": "pow.sh",
    "scene": "power",
    "text": "股东拥有所有权，用表决权选出董事会。",
-   "start": 62.982,
-   "end": 67.152
+   "start": 52.33,
+   "end": 55.908
   },
   {
    "id": "pow.board",
    "scene": "power",
    "text": "董事会任命、监督，也能更换CEO。",
-   "start": 67.452,
-   "end": 71.407
+   "start": 56.208,
+   "end": 59.503
   },
   {
    "id": "pow.ceo",
    "scene": "power",
    "text": "CEO带领管理层，负责经营。",
-   "start": 71.707,
-   "end": 75.017
+   "start": 59.803,
+   "end": 62.307
   },
   {
    "id": "pow.back",
    "scene": "power",
    "text": "反过来，管理层对董事会负责，董事会对股东负责。",
-   "start": 75.467,
-   "end": 80.712
+   "start": 62.757,
+   "end": 67.159
   },
   {
    "id": "pow.founder",
    "scene": "power",
    "text": "创始人的影响力，更多来自业绩和信任。",
-   "start": 81.162,
-   "end": 85.332
+   "start": 67.609,
+   "end": 70.744
   },
   {
    "id": "tl.bg",
    "scene": "timeline",
    "text": "2025年，H20芯片出口，先受限、后放行。",
-   "start": 86.583,
-   "end": 91.613
+   "start": 72.017,
+   "end": 77.2
   },
   {
    "id": "tl.oct",
    "scene": "timeline",
    "text": "2026年10月底，媒体报道，美方正调查英伟达的一家客户。",
-   "start": 92.013,
-   "end": 98.548
+   "start": 77.6,
+   "end": 82.361
   },
   {
    "id": "tl.nov",
    "scene": "timeline",
    "text": "11月初，报道指向黄仁勋与该公司高管的私人关系。",
-   "start": 98.848,
-   "end": 104.308
+   "start": 82.661,
+   "end": 86.886
   },
   {
    "id": "tl.alleg",
    "scene": "timeline",
    "text": "所谓情报背景，至今没有公开证据。",
-   "start": 104.608,
-   "end": 108.348
+   "start": 87.186,
+   "end": 89.901
   },
   {
    "id": "tl.nov8",
    "scene": "timeline",
    "text": "11月8日，黄仁勋致信道歉，董事会启动独立调查。",
-   "start": 108.798,
-   "end": 114.258
+   "start": 90.351,
+   "end": 95.033
   },
   {
    "id": "turn.resign",
    "scene": "turning",
    "text": "11月11日，董事会接受黄仁勋辞任。",
-   "start": 115.767,
-   "end": 119.937
+   "start": 96.533,
+   "end": 99.743
   },
   {
    "id": "turn.kress",
    "scene": "turning",
    "text": "次日公告：首席财务官克雷斯，出任临时CEO。",
-   "start": 120.537,
-   "end": 125.567
+   "start": 100.343,
+   "end": 104.613
   },
   {
    "id": "turn.chair",
    "scene": "turning",
    "text": "哈维·琼斯，成为首位董事长。",
-   "start": 125.967,
-   "end": 129.277
+   "start": 105.013,
+   "end": 107.487
   },
   {
    "id": "ins.neq",
    "scene": "insight",
    "text": "所有权，不等于控制权。",
-   "start": 130.7,
-   "end": 133.365
+   "start": 108.9,
+   "end": 110.918
   },
   {
    "id": "ins.start",
    "scene": "insight",
    "text": "股权比例，只是理解控制力的起点。",
-   "start": 133.865,
-   "end": 137.605
+   "start": 111.418,
+   "end": 113.881
   },
   {
    "id": "ins.rest",
    "scene": "insight",
    "text": "还要看表决权、董事会，和管理层。",
-   "start": 137.955,
-   "end": 141.695
+   "start": 114.231,
+   "end": 117.138
   },
   {
    "id": "end.quote",
    "scene": "conclusion",
    "text": "持有多少股份，和掌握多少权力，从来不是同一个问题。",
-   "start": 143.0,
-   "end": 148.675
+   "start": 118.467,
+   "end": 122.88
   },
   {
    "id": "end.note",
    "scene": "conclusion",
    "text": "调查仍在进行，相关指控尚无定论。",
-   "start": 149.275,
-   "end": 153.015
+   "start": 123.48,
+   "end": 126.517
   },
   {
    "id": "end.brand",
    "scene": "conclusion",
    "text": "看见数字背后的结构。",
-   "start": 153.715,
-   "end": 156.165
+   "start": 127.217,
+   "end": 128.724
   }
  ]
 }

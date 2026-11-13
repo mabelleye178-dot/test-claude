@@ -29,3 +29,8 @@
 - 配乐：`python3 scripts/v3/score_v3.py`；混音：`python3 scripts/v3/mix.py`（输出 public/audio/v3-mix.wav）。
 - 渲染：`npx remotion render NyxNvidiaV3 out/nyx-nvidia-directors-cut-v3.mp4 --codec=h264 --crf=18 --audio-codec=aac`
 - 交付目录：deliverables/v3/
+
+### V3 状态：已完成并交付（2026-11-13）
+- 成片与配套文件在 `deliverables/v3/`；质检结果 `deliverables/v3/qc-report.json`。
+- `public/audio/v3-mix.wav` 不入库：运行 `python3 scripts/v3/score_v3.py && python3 scripts/v3/mix.py` 即可重建（逐句旁白在 `assets/v3/tts/`）。
+- Python 依赖：numpy scipy soundfile librosa（混音/配乐）；torch transformers==4.57.3 accelerate==1.12.0 qwen-tts(--no-deps) einops onnxruntime（重新合成旁白）；faster-whisper pypinyin（质检，需 `HF_HUB_DISABLE_XET=1`）。

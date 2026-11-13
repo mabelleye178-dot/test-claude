@@ -17,7 +17,9 @@ def rms_active(x):
 # 1) assemble narration (per-cue level matching, so no sentence jumps out)
 voice = np.zeros(N, dtype=np.float32)
 for c in tl["cues"]:
-    x, sr = sf.read(os.path.join(ROOT, "out/v3/tts", c["id"] + ".wav"), dtype="float32")
+    clip = os.path.join(ROOT, "out/v3/tts", c["id"] + ".wav")
+    if not os.path.exists(clip): clip = os.path.join(ROOT, "assets/v3/tts", c["id"] + ".wav")  # committed copies
+    x, sr = sf.read(clip, dtype="float32")
     if x.ndim > 1: x = x.mean(1)
     x = resample_poly(x, SR, sr).astype(np.float32)
     x *= db(-20) / rms_active(x)
@@ -26,7 +28,7 @@ for c in tl["cues"]:
 sf.write(os.path.join(A, "voice_raw.wav"), voice, SR)
 
 # 2) voice chain: HPF, de-mud, presence, air, de-esser, gentle compression, safety limiter
-chain = ("highpass=f=85,equalizer=f=240:t=q:w=1.0:g=-2.2,equalizer=f=3300:t=q:w=1.1:g=2.4,treble=g=3:f=9000,"
+chain = ("highpass=f=85,bass=g=-1.5:f=180,equalizer=f=240:t=q:w=1.0:g=-2.2,equalizer=f=3300:t=q:w=1.1:g=2.4,treble=g=3:f=9000,"
          "deesser=i=0.35:m=0.5:f=0.5:s=o,acompressor=threshold=-21dB:ratio=2.6:attack=8:release=140:makeup=2.5,alimiter=limit=0.89:level=false")
 ff(["-i", os.path.join(A, "voice_raw.wav"), "-af", chain, "-ar", str(SR), "-c:a", "pcm_f32le", os.path.join(A, "voice_proc.wav")])
 v, _ = sf.read(os.path.join(A, "voice_proc.wav"), dtype="float32"); v = v[:N] if len(v) >= N else np.pad(v, (0, N - len(v)))
@@ -52,6 +54,11 @@ out = np.empty_like(duck); y = 1.0; ka = 1 - math.exp(-1 / (0.14 * SR)); kr = 1 
 for i in range(N):
     tgt = duck[i]; y += (ka if tgt < y else kr) * (tgt - y); out[i] = y
 m_ducked = m * out[:, None]
+mask = np.zeros(N, bool)
+for c in cues: mask[int(c['start'] * SR):int(c['end'] * SR)] = True
+dbv = lambda x: 20 * np.log10(np.sqrt(np.mean(x ** 2)) + 1e-12)
+SEP = dbv(v[mask]) - dbv(m_ducked[mask]); GAPM = dbv(m_ducked[~mask]); TAILM = dbv(m_ducked[int((cues[-1]['end'] + 0.6) * SR):])
+print(f'voice-to-music separation during speech {SEP:.1f} dB; music in pauses {GAPM:.1f} dB; music in outro tail {TAILM:.1f} dB')
 
 # 4) sum, static gain to -16 LUFS (dynamics untouched), true-peak safety limiter
 mix = voice_st + m_ducked
@@ -73,4 +80,4 @@ sf.write(os.path.join(A, "voice_final.wav"), (voice_st * db(gain)).astype(np.flo
 sf.write(os.path.join(A, "music_final.wav"), (m * db(gain)).astype(np.float32), SR, subtype="PCM_24")
 os.makedirs(os.path.join(ROOT, "public/audio"), exist_ok=True)
 ff(["-i", os.path.join(A, "mix_final.wav"), "-c:a", "pcm_s16le", os.path.join(ROOT, "public/audio/v3-mix.wav")])
-json.dump({"integrated_lufs": I2, "lra": LRA2, "true_peak_dbtp": TP2, "static_gain_db": round(gain, 2), "duck_db": -9.5, "music_bed_rms_db": -23.5, "voice_rms_db": -19}, open(os.path.join(A, "mix_report.json"), "w"), indent=1)
+json.dump({"integrated_lufs": I2, "lra": LRA2, "true_peak_dbtp": TP2, "static_gain_db": round(gain, 2), "duck_db": -9.5, "speech_separation_db": round(float(SEP), 1), "music_bed_rms_db": -23.5, "voice_rms_db": -19}, open(os.path.join(A, "mix_report.json"), "w"), indent=1)

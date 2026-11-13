@@ -21,7 +21,7 @@ export const BOARD = {
   independentElected: 9,
   expandedOn: "2026-07-13",
   seatsAfterExpansion: 11,
-  huangLeftOn: "2026-11-12",
+  huangLeftOn: "2026-11-11",
   seatsAfterExit: 10,
   // Names confirmed in SEC filing excerpts; others shown by role only.
   seats: [
@@ -56,12 +56,12 @@ export const TIMELINE: TimelineItem[] = [
   { date: "2026-11-08", title: "道歉信 · 董事会启动独立调查", detail: "黄仁勋致员工信承认婚外情并道歉；董事会称将由独立董事委员会牵头独立调查。", cls: "confirmed", src: "NVIDIA 新闻稿" },
   { date: "2026-11-10", title: "独立董事聘请外部律所", detail: "独立董事聘请前纽约南区代理联邦检察官 Joon H. Kim 及 Wachtell Lipton 主导调查。", cls: "confirmed", src: "NVIDIA 新闻稿" },
   { date: "2026-11-11", title: "国会压力升级", detail: "多名议员呼吁黄仁勋辞职，并推动收紧AI芯片出口管制。", cls: "media", src: "CNBC 等报道" },
-  { date: "2026-11-12", title: "黄仁勋辞任", detail: "辞去总裁、CEO及董事职务，即时生效；Colette Kress 代理CEO；Harvey C. Jones 任首任董事长。", cls: "confirmed", src: "NVIDIA 8-K / 新闻稿" },
+  { date: "2026-11-11/12", title: "黄仁勋辞任", detail: "11日董事会接受其辞去总裁、CEO及董事职务，即时生效；12日公告：Colette Kress 代理CEO，Harvey C. Jones 任首任董事长。", cls: "confirmed", src: "NVIDIA 8-K (事件日 11-11) / 新闻稿 (11-12)" },
 ];
 
 export const SOURCES = [
   "NVIDIA DEF 14A（2026-05-12）：持股表，截至2026-03-23",
   "NVIDIA 8-K（2026-06-24）：股东大会投票结果",
-  "NVIDIA 新闻稿（2026-11-08 / 11-10 / 11-12）",
+  "NVIDIA 8-K（事件日 2026-11-11）· 新闻稿（11-08 / 11-10 / 11-12）",
   "Bloomberg · CNN · CNBC · CBS News（媒体报道，已标注）",
 ];

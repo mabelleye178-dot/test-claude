@@ -16,7 +16,7 @@ export const Board: React.FC = () => {
   const EXIT = 215;
   const exitP = spring({ frame: frame - EXIT, fps, config: { damping: 30, stiffness: 90 } });
   const count = frame < 120 ? 10 : frame < EXIT ? 11 : 10;
-  const countLabel = frame < 120 ? "2026-06-24 股东选出" : frame < EXIT ? "2026-07-13 增至" : "2026-11-12 黄仁勋辞任后";
+  const countLabel = frame < 120 ? "2026-06-24 股东选出" : frame < EXIT ? "2026-07-13 增至" : "2026-11-11 黄仁勋辞任后";
 
   return (
     <AbsoluteFill style={{ background: C.bg }}>
@@ -79,7 +79,7 @@ export const Board: React.FC = () => {
             {s.isHuang ? (
               <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", opacity: vac, transform: "rotateY(180deg)" }}>
                 <div style={{ fontFamily: F.serif, fontWeight: 900, fontSize: 34, color: C.unverified }}>席位空缺</div>
-                <div style={{ fontFamily: F.sans, fontSize: 20, color: C.muted, marginTop: 6 }}>2026-11-12 辞任</div>
+                <div style={{ fontFamily: F.sans, fontSize: 20, color: C.muted, marginTop: 6 }}>2026-11-11 辞任</div>
               </div>
             ) : null}
             {s.isNew ? (

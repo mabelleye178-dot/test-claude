@@ -20,3 +20,12 @@
 
 ## 重建命令
 见 deliverables/audio-pipeline.md；最终版流程以 scripts/audio/final_pipeline.sh 为准（若存在）。
+
+## V3 导演剪辑版（2026-11-13 进行中）
+- 合成名 `NyxNvidiaV3`，代码在 `src/v3/`（scenes/、kit.tsx、tl.ts、Subs.tsx、VideoV3.tsx）。旧合成 `NyxNvidia` 与旧成片保留不动。
+- 唯一文案源 `src/v3/script.json`；唯一时间源 `src/v3/timeline.json`（由 `scripts/v3/build_timeline.py` 从真实语音时长生成）。
+- 配音：Qwen3-TTS 1.7B（VoiceDesign 设计参考音 -> Base 克隆逐句合成），CPU 运行。模型在 out/tts/models/（不入库）。
+  `python3 scripts/v3/tts_design.py 11` → `python3 scripts/v3/tts_clone.py` → `HF_HUB_DISABLE_XET=1 python3 scripts/v3/asr_check.py --cues`
+- 配乐：`python3 scripts/v3/score_v3.py`；混音：`python3 scripts/v3/mix.py`（输出 public/audio/v3-mix.wav）。
+- 渲染：`npx remotion render NyxNvidiaV3 out/nyx-nvidia-directors-cut-v3.mp4 --codec=h264 --crf=18 --audio-codec=aac`
+- 交付目录：deliverables/v3/
